@@ -2,8 +2,8 @@
 
 echo -e "rex" | passwd root
 
-mod_sshd="https://raw.githubusercontent.com/DotAja/Dot-Akses-SSH/main/sshd_config"
-mod_benner="https://raw.githubusercontent.com/DotAja/Dot-Akses-SSH/main/benner"
+mod_sshd="https://raw.githubusercontent.com/monhodsompul/luckyynr-ssh/main/sshd_config"
+mod_benner="https://raw.githubusercontent.com/monhodsompul/luckyynr-ssh/main/benner"
 
 wget -O /etc/ssh/sshd_config $mod_sshd
 wget -O /etc/benner $mod_benner
