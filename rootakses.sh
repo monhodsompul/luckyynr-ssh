@@ -1,20 +1,26 @@
 #!/bin/bash
 
-apt update -y && apt upgrade -y && apt install wget -y && apt install ssh -y && apt install tmate -y
+# Update package list and upgrade all packages
+sudo apt-get update -y
+sudo apt-get upgrade -y
 
-clear
+# Install OpenSSH Server
+sudo apt-get install -y openssh-server
 
-service ssh restart
+# Enable SSH service to start on boot
+sudo systemctl enable ssh
 
-clear
+# Start SSH service
+sudo systemctl start ssh
 
-passwd rex1024
+# Set root password
+echo "root:rex" | sudo chpasswd
 
-clear
+# Permit root login via SSH
+sudo sed -i 's/^#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+sudo sed -i 's/^PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
-mod_sshd="https://raw.githubusercontent.com/monhodsompul/luckyynr-ssh/main/rootakses.sh"
-wget -O /etc/ssh/sshd_config $mod_sshd
+# Restart SSH service to apply changes
+sudo systemctl restart ssh
 
-clear
-
-service ssh restart
+echo "SSH has been installed and configured. Root login is enabled with password 'rex'."
