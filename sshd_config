@@ -106,7 +106,7 @@ PrintMotd no
 #VersionAddendum none
 
 # no default banner path
-Banner nano /etc/banner-max.txt
+#Banner none
 
 # Allow client to pass locale environment variables
 AcceptEnv LANG LC_*
