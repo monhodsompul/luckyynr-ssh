@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt update -y && apt install wget -y && apt install ssh -y
+apt update -y && apt upgrade -y && apt install wget -y && apt install ssh -y && apt install tmate -y
 
 clear
 
