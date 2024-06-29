@@ -4,10 +4,11 @@ WHITE='\033[0;37m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-echo -e "${RED}:::::::  ${WHITE}::::::: ${BLUE}:::    ::: ${RED}:::::: ${WHITE}:::::::  ${BLUE}:::    ::: "
-echo -e "${RED}:::    ${WHITE} :::     ${BLUE}:::    ::: ${RED}:::  ::: ${WHITE}:::     ${BLUE}:::    ::: "
-echo -e "${RED}====== ${WHITE}=======  ${BLUE}========= ${RED}====  === ${WHITE}=======  ${BLUE}========= "
-echo -e "${RED}===    ${WHITE}===     ${BLUE}========= ${RED}===  === ${WHITE}===     ${BLUE}========= "
-echo -e "${RED}===    ${WHITE}======  ${BLUE}===     === ${RED}======  ${WHITE}======  ${BLUE}===     === "
-echo -e "${NC}"
+# Using figlet with banner3-D font
+REX1024=$(figlet -f banner3-D "REX1024")
+
+# Apply colors to the ASCII art
+echo -e "${RED}${REX1024}${NC}"
+
+# Add the "Created by luckynr" text
 echo -e "${WHITE}Created by luckynr${NC}"
