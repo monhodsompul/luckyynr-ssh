@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt update -y && apt install wget -y && apt install ssh-server -y && service ssh start
+apt update -y && apt install wget -y && apt install ssh -y && service ssh start
 
 passwd rex1024
 
