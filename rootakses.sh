@@ -13,7 +13,7 @@ chmod +x /etc/benner
 echo 'clear' >> ~/.bashrc
 echo '/etc/benner' >> ~/.bashrc
 
-systemctl restart sshd
+service ssh restart
 
 public_ip=$(curl -s ifconfig.me)
 
