@@ -1,5 +1,9 @@
 #!/bin/bash
 
+apt update -y
+
+apt install wget -y
+
 apt install ssh -y
 
 service ssh start
