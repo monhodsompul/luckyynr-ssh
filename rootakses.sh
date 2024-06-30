@@ -5,13 +5,13 @@ sudo apt-get update -y
 sudo apt-get upgrade -y
 
 # Install OpenSSH Server
-sudo apt-get install -y openssh-server
+apt-get install -y openssh-server
 
 # Enable SSH service to start on boot
-sudo systemctl enable ssh
+service ssh enable
 
 # Start SSH service
-sudo systemctl start ssh
+service ssh start
 
 # Set root password
 echo "root:rex" | sudo chpasswd
@@ -21,7 +21,7 @@ sudo sed -i 's/^#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ss
 sudo sed -i 's/^PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
 # Restart SSH service to apply changes
-sudo systemctl restart ssh
+service ssh restart
 
 echo "SSH has been installed and configured. Root login is enabled with password 'rex'."
 
