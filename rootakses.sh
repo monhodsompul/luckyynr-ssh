@@ -14,11 +14,11 @@ service ssh enable
 service ssh start
 
 # Set root password
-echo "root:rex" | sudo chpasswd
+echo "root:rex" | chpasswd
 
 # Permit root login via SSH
-sudo sed -i 's/^#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
-sudo sed -i 's/^PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+sed -i 's/^#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+sed -i 's/^PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
 # Restart SSH service to apply changes
 service ssh restart
