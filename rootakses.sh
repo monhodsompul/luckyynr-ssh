@@ -24,3 +24,14 @@ sudo sed -i 's/^PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh
 sudo systemctl restart ssh
 
 echo "SSH has been installed and configured. Root login is enabled with password 'rex'."
+
+
+echo "██████╗ ███████╗██╗  ██╗ ██╗ ██████╗ ██████╗ ██╗  ██╗" > /etc/motd
+echo "██╔══██╗██╔════╝╚██╗██╔╝███║██╔═████╗╚════██╗██║  ██║" > /etc/motd
+echo "██████╔╝█████╗   ╚███╔╝ ╚██║██║██╔██║ █████╔╝███████║" > /etc/motd
+echo "██╔══██╗██╔══╝   ██╔██╗  ██║████╔╝██║██╔═══╝ ╚════██║" > /etc/motd
+echo "██║  ██║███████╗██╔╝ ██╗ ██║╚██████╔╝███████╗     ██║" > /etc/motd
+echo "╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═╝ ╚═════╝ ╚══════╝     ╚═╝" > /etc/motd
+echo "Create By luckyynr" >> /etc/motd
+
+sudo systemctl restart ssh
