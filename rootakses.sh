@@ -34,4 +34,4 @@ echo "██║  ██║███████╗██╔╝ ██╗ ██�
 echo "╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═╝ ╚═════╝ ╚══════╝     ╚═╝" > /etc/motd
 echo "Create By luckyynr" >> /etc/motd
 
-sudo systemctl restart ssh
+service ssh restart
