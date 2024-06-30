@@ -23,15 +23,6 @@ sed -i 's/^PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd
 # Restart SSH service to apply changes
 service ssh restart
 
-echo "SSH has been installed and configured. Root login is enabled with password 'rex'."
+apt install tmate -y
 
-
-echo "██████╗ ███████╗██╗  ██╗ ██╗ ██████╗ ██████╗ ██╗  ██╗" > /etc/motd
-echo "██╔══██╗██╔════╝╚██╗██╔╝███║██╔═████╗╚════██╗██║  ██║" > /etc/motd
-echo "██████╔╝█████╗   ╚███╔╝ ╚██║██║██╔██║ █████╔╝███████║" > /etc/motd
-echo "██╔══██╗██╔══╝   ██╔██╗  ██║████╔╝██║██╔═══╝ ╚════██║" > /etc/motd
-echo "██║  ██║███████╗██╔╝ ██╗ ██║╚██████╔╝███████╗     ██║" > /etc/motd
-echo "╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═╝ ╚═════╝ ╚══════╝     ╚═╝" > /etc/motd
-echo "Create By luckyynr" >> /etc/motd
-
-service ssh restart
+tmate
